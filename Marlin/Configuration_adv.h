@@ -1085,37 +1085,37 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #define X_CURRENT          1000  // rms current in mA. Multiply by 1.41 for peak current.
-  #define X_MICROSTEPS       256  // 0..256
+  #define X_MICROSTEPS       16  // 0..256
 
-  #define Y_CURRENT          1000
-  #define Y_MICROSTEPS       256
+  #define Y_CURRENT          1200
+  #define Y_MICROSTEPS       16
 
   #define Z_CURRENT          1200
-  #define Z_MICROSTEPS       256
+  #define Z_MICROSTEPS       8
 
   #define X2_CURRENT         1000
-  #define X2_MICROSTEPS      256
+  #define X2_MICROSTEPS      16
 
-  #define Y2_CURRENT         1000
-  #define Y2_MICROSTEPS      256
+  #define Y2_CURRENT         1200
+  #define Y2_MICROSTEPS      16
 
   #define Z2_CURRENT         1000
-  #define Z2_MICROSTEPS      256
+  #define Z2_MICROSTEPS      16
 
   #define E0_CURRENT         1000
-  #define E0_MICROSTEPS      256
+  #define E0_MICROSTEPS      16
 
   #define E1_CURRENT         1000
-  #define E1_MICROSTEPS      256
+  #define E1_MICROSTEPS      16
 
   #define E2_CURRENT         800
-  #define E2_MICROSTEPS      256
+  #define E2_MICROSTEPS      16
 
   #define E3_CURRENT         800
-  #define E3_MICROSTEPS      256
+  #define E3_MICROSTEPS      16
 
   #define E4_CURRENT         800
-  #define E4_MICROSTEPS      256
+  #define E4_MICROSTEPS      16
 
   /**
    * Use software SPI for TMC2130.
@@ -1160,10 +1160,10 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     100
-  #define Y2_HYBRID_THRESHOLD    100
+  #define X_HYBRID_THRESHOLD     50  // [mm/s]
+  #define X2_HYBRID_THRESHOLD    50
+  #define Y_HYBRID_THRESHOLD     50
+  #define Y2_HYBRID_THRESHOLD    50
   #define Z_HYBRID_THRESHOLD       3
   #define Z2_HYBRID_THRESHOLD      3
   #define E0_HYBRID_THRESHOLD     30
@@ -1427,7 +1427,7 @@
 /**
  * Disable all Volumetric extrusion options
  */
-//#define NO_VOLUMETRICS
+#define NO_VOLUMETRICS
 
 #if DISABLED(NO_VOLUMETRICS)
   /**
